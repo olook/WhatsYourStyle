@@ -1,0 +1,96 @@
+{
+  "quiz": {
+    "survey" : {
+      "id" : 1,
+      "name" : "Whats your style?",
+      "questions" : [
+        {
+          "id" : 1,
+          "text" : "Que tipo de sapato você gosta?",
+          "answers" : [
+            {
+              "id" : 4,
+              "text" : "Salto alto",
+              "image" : "image_url"
+            },
+            {
+              "id" : 5,
+              "text" : "Salto baixo",
+              "image" : "image_url"
+            },
+            {
+              "id" : 6,
+              "text" : "Salto muito alto",
+              "image" : "image_url"
+            },
+            {
+              "id" : 7,
+              "text" : "Salto médio",
+              "image" : "image_url"
+            }
+          ]
+        },
+        {
+          "id" : 2,
+          "text" : "Que tipo de sapato você gosta?",
+          "answers" : [
+            {
+              "id" : 4,
+              "text" : "Salto alto",
+              "image" : "image_url"
+            },
+            {
+              "id" : 5,
+              "text" : "Salto baixo",
+              "image" : "image_url"
+            },
+            {
+              "id" : 6,
+              "text" : "Salto muito alto",
+              "image" : "image_url"
+            },
+            {
+              "id" : 7,
+              "text" : "Salto médio",
+              "image" : "image_url"
+            }
+          ]       
+        }]
+    }
+  }
+}
+
+
+
+
+{
+  "survey_challenge" : {
+    "1" : "4",
+    "2" : "8",
+    "3" : "9"
+  }
+}
+
+After answering the question, you can always save the customers answer in your side (if you need to analyze them later). Important:
+
+In the app side the answers are also saved as later in can be used as a training record. However, we do not have any customer identification
+in our side, the only identification that can be used later is the UUID code that is sent to you. If you need to link it later,
+please remember to save this value in your side too.
+
+
+{
+  "id" : "abiuiu78tg2389h42no3ejoi23tdd6qd5sdagysb238979h8i3",
+  "result" : {
+    "classification_label" : ""
+  }
+}
+
+After this step you can also post back if the classification label was right or wrong. You may not use this feature, in an everyday 
+scenario, but if you are conducting new analyses this can be extremelly useful to create new training records.
+
+{
+  "id" : "",
+  "result" :{
+    "assert_result" : true
+  }
+}

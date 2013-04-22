@@ -1,0 +1,1 @@
+curl -H "Accept: application/json" -H "Content-type: application/json" -X POST -d '{"challenge":{"answers":{"21":"81","7":"27","3":"9","1":"1","13":"49","20":"78","8":"29","12":"47","18":"69","10":"37","11":"43"}}}' http://localhost:9000/v1/challenges/create?api_token=Vq2UDyqnyj2vovKK4btCeQ

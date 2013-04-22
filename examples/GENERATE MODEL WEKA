@@ -1,0 +1,5 @@
+export CLASSPATH=$CLASSPATH:/home/felipe/Weka/weka.jar
+java weka.classifiers.bayes.NaiveBayes -t ./train.arff -d naive_bayes.model
+
+
+java weka.classifiers.bayes.NaiveBayes -T test.arff -l j48.model -p 0

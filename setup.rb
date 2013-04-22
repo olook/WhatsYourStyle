@@ -1,0 +1,3 @@
+require 'whats_your_style'
+extend WhatsYourStyle::DatabaseConnectable
+set_database_connection

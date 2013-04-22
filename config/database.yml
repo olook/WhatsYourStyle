@@ -1,0 +1,29 @@
+development:
+  adapter: jdbcmysql
+  encoding: utf8
+  reconnect: false
+  database: whats_your_style_development
+  pool: 5
+  username: root
+  password: felipe
+  host: localhost
+
+test:
+  adapter: jdbcmysql
+  encoding: utf8
+  reconnect: false
+  database: whats_your_style_test
+  pool: 5
+  username: root
+  password: felipe
+  host: localhost
+
+production:
+  adapter: jdbcmysql
+  encoding: utf8
+  reconnect: false
+  database: whats_your_style_production
+  pool: 5
+  username: root
+  password: felipe
+  host: localhost
