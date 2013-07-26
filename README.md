@@ -40,7 +40,7 @@ If you like create your gemset
 
     rvm use jruby-1.7.4@whatsyourstyle --create
 
-Go to config folder and change username and password in database.yml for you environment. If you can
+Go to config folder and change username and password in database.yml for you environment. You can
 find other ymls there to customize the system as you wish
 
 Now create the database
