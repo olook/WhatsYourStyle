@@ -43,21 +43,24 @@ If you like create your gemset
 Go to config folder and change username and password in database.yml for you environment. If you can
 find other ymls there to customize the system as you wish
 
-Now execute
+Now create the database
 
   bundle exec rake db:create:all
 
-Then
+Then migrate it
 
   bundle exec rake db:migrate['development']
 
-And finally
+And finally seed it with the quiz
 
   bundle exec rake db:seed['development']
 
 Finally create an access token for a given app 
 
   bundle exec rake authentication_token:create_access_token['development','olook']
+  
+  >> Your access token is Tz_WfwdxtVSYI2PQrYMiYg
+
 
 Finally start goliath in versobse mode and watch the output
 
@@ -72,28 +75,6 @@ style"}]
 Access the quiz and get the questions
 
   curl -H "Accept: application/json" -X GET http://localhost:9000/v1/quizzes/1?api_token=[API_TOKEN]
-
-# Usage
-
-Creating the database
-
-    bundle exec rake db:create[ENV] or bundle exec rake db:create:all
-
-Migrating
-
-    bundle exec rake db:migrate[ENV]
-
-To create the Quiz, just run the seed
-  
-    bundle exec rake db:seed[ENV] i.e bundle exec rake db:seed['development']
-
-# Create an API Token
-
-Only registered apps have access to the system. To get an API token, register your app with the following rake:
-
-    bundle exec rake authentication:create_access_token["development","Olook"]
-
-    >> Your access token is Tz_WfwdxtVSYI2PQrYMiYg
 
 # Quiz API
 
