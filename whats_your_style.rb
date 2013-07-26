@@ -1,7 +1,7 @@
 require 'bundler'
 Bundler.require
 #require 'json/pure'
-require 'application'
+require './application'
 
 module WhatsYourStyle
 
@@ -18,7 +18,7 @@ module WhatsYourStyle
     require 'java'
     $CLASSPATH << Application.root + '/app/classification/lib'
 
-    autoload :DataBuilder, 'app/classification/data_builder' 
+    autoload :DataBuilder, 'app/classification/data_builder'
     autoload :Classifier, 'app/classification/classifier'
     autoload :J48,  'app/classification/j48'
     autoload :NaiveBayes, 'app/classification/naive_bayes'
