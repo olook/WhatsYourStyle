@@ -61,7 +61,6 @@ Finally create an access token for a given app
   
     Your access token is Tz_WfwdxtVSYI2PQrYMiYg
 
-
 Finally start goliath in verbose mode and watch the output
 
     jruby api.rb -sv
@@ -75,6 +74,12 @@ Access through browser or curl
 Access the quiz and get the questions
 
     curl -H "Accept: application/json" -X GET http://localhost:9000/v1/quizzes/1?api_token=[API_TOKEN]
+
+# Changing the app configuration
+
+You can change some parameters such as the path to the images (if you use you
+own cdn) on __config/app.yml__
+
 
 # Quiz API
 
