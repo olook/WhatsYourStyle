@@ -14,16 +14,18 @@ platforms :jruby do
 end
 
 group :development do
-  gem "ruby-debug"
   gem "github-markup"
 end
 
 group :test do
   gem "rspec"
   gem "spork"
-  gem "pry"
   gem "factory_girl"
   gem "database_cleaner"
   gem "json_spec"
   gem "rack-test", "~> 0.6.2", :require => "rack/test"
+end
+
+group :development, :test do
+  gem "pry"
 end
