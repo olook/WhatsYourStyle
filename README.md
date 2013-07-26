@@ -164,6 +164,14 @@ To get access to a specific quiz, you have to pass the id number in your url or 
 
 Where the answers object above is on the format "question\_id":"answer\_id"
 
+If everything goes right, you should see the output
+
+    {"uuid":"6b855470-d81e-0130-2b3f-0026b9d7d233","classification_label":"casual/romantica"}
+
+The uuid defines an unique challenge transaction. A challenge is composed by an uuid, the set of all answers, the classification_label, and a boolean field which marks the record as ready to be trained.
+You can store this uuid in your side for safety if you want. 
+
+
 ## Running the server
 
 Goliath is being used as the web server. Remember, goliath is both web server and a rack based server, there is no need for mongrel, thin, etc.
