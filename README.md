@@ -30,6 +30,49 @@ Weka's prefered format
 
 Two different supervised algorithms had their classification performance tested. The C4.5 (known as J48 in Weka) and NaiveBayes. Currently, the C4.5 model is being used as it has outperformed NaiveBayes with a F-measure of 81%
 
+# Installation & Setup
+
+First install jruby. If you are using rvm
+
+  rvm install jruby-1.7.4
+
+If you like create your gemset
+
+  rvm use jruby-1.7.4@whatsyourstyle --create
+
+Go to config folder and change username and password in database.yml for you environment. If you can
+find other ymls there to customize the system as you wish
+
+Now execute
+
+  bundle exec rake db:create:all
+
+Then
+
+  bundle exec rake db:migrate['development']
+
+And finally
+
+  bundle exec rake db:seed['development']
+
+Finally create an access token for a given app 
+
+  bundle exec rake authentication_token:create_access_token['development','olook']
+
+Finally start goliath in versobse mode and watch the output
+
+  jruby api.rb -sv
+
+Access through browser or curl
+  http://localhost:9000/v1/quizzes?api_token=[API_TOKEN]
+
+  [{"name":"Whats your style?","description":"A quiz to discover Olook's customers
+style"}]
+
+Access the quiz and get the questions
+
+  curl -H "Accept: application/json" -X GET http://localhost:9000/v1/quizzes/1?api_token=[API_TOKEN]
+
 # Usage
 
 Creating the database
@@ -48,7 +91,7 @@ To create the Quiz, just run the seed
 
 Only registered apps have access to the system. To get an API token, register your app with the following rake:
 
-    bundle exec rake authentication:create_access_token["Olook"]
+    bundle exec rake authentication:create_access_token["development","Olook"]
 
     >> Your access token is Tz_WfwdxtVSYI2PQrYMiYg
 
@@ -145,3 +188,4 @@ You can also use a reverse proxy to run multiples instances of the platform
 Any questions regarding the theory, methods and design involved in this project, feel free to contact me at felipe@expertte.com
 
 [<img src="http://www.expertte.com/assets/expertte_logo.png">](http://expertte.com/)
+
