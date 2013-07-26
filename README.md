@@ -61,7 +61,7 @@ And finally seed it with the quiz
 
 Create an access token for a given app 
 
-    bundle exec rake authentication_token:create_access_token['development','olook']
+    bundle exec rake authentication:create_access_token['development','olook']
   
     Your access token is Tz_WfwdxtVSYI2PQrYMiYg
 
