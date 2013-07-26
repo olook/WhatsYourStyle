@@ -40,6 +40,10 @@ If you like create your gemset
 
     rvm use jruby-1.7.4@whatsyourstyle --create
 
+Clone and install the dependencies
+
+    clone the project and run bundle install
+
 Go to config folder and change username and password in database.yml for you environment. You can
 find other ymls there to customize the system as you wish
 
@@ -55,13 +59,13 @@ And finally seed it with the quiz
 
     bundle exec rake db:seed['development']
 
-Finally create an access token for a given app 
+Create an access token for a given app 
 
     bundle exec rake authentication_token:create_access_token['development','olook']
   
     Your access token is Tz_WfwdxtVSYI2PQrYMiYg
 
-Finally start goliath in verbose mode and watch the output
+Start goliath in verbose mode and watch the output
 
     jruby api.rb -sv
 
