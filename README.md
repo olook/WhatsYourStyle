@@ -34,47 +34,47 @@ Two different supervised algorithms had their classification performance tested.
 
 First install jruby. If you are using rvm
 
-  rvm install jruby-1.7.4
+    rvm install jruby-1.7.4
 
 If you like create your gemset
 
-  rvm use jruby-1.7.4@whatsyourstyle --create
+    rvm use jruby-1.7.4@whatsyourstyle --create
 
 Go to config folder and change username and password in database.yml for you environment. If you can
 find other ymls there to customize the system as you wish
 
 Now create the database
 
-  bundle exec rake db:create:all
+    bundle exec rake db:create:all
 
 Then migrate it
-
-  bundle exec rake db:migrate['development']
+  
+    bundle exec rake db:migrate['development']
 
 And finally seed it with the quiz
 
-  bundle exec rake db:seed['development']
+    bundle exec rake db:seed['development']
 
 Finally create an access token for a given app 
 
-  bundle exec rake authentication_token:create_access_token['development','olook']
+    bundle exec rake authentication_token:create_access_token['development','olook']
   
-  >> Your access token is Tz_WfwdxtVSYI2PQrYMiYg
+    Your access token is Tz_WfwdxtVSYI2PQrYMiYg
 
 
-Finally start goliath in versobse mode and watch the output
+Finally start goliath in verbose mode and watch the output
 
-  jruby api.rb -sv
+    jruby api.rb -sv
 
 Access through browser or curl
-  http://localhost:9000/v1/quizzes?api_token=[API_TOKEN]
+  
+    http://localhost:9000/v1/quizzes?api_token=[API_TOKEN]
 
-  [{"name":"Whats your style?","description":"A quiz to discover Olook's customers
-style"}]
+    [{"name":"Whats your style?","description":"A quiz to discover Olook's customers style"}]
 
 Access the quiz and get the questions
 
-  curl -H "Accept: application/json" -X GET http://localhost:9000/v1/quizzes/1?api_token=[API_TOKEN]
+    curl -H "Accept: application/json" -X GET http://localhost:9000/v1/quizzes/1?api_token=[API_TOKEN]
 
 # Quiz API
 
