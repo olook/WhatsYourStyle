@@ -1,3 +1,4 @@
+$: << File.dirname(__FILE__)
 require 'whats_your_style'
 
 module WhatsYourStyle
@@ -68,7 +69,7 @@ module WhatsYourStyle
         challenge.training_record = true
         challenge.save!
       end
-      
+
     end
 
   end
