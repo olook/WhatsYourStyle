@@ -174,7 +174,13 @@ You can store this uuid in your side for safety if you want.
 
 ## Running the server
 
-Goliath is being used as the web server. Remember, goliath is both web server and a rack based server, there is no need for mongrel, thin, etc.
+Goliath is based on EventMachine and is being used here as the basis for a potential high accessed with high
+throughtput service, if that ever happens in the future. Keep in mind that some
+libraries inside are blocking I/O, therefore you may not enjoy the full pontetial
+of the server. In the future, if the server is not handling the requests, it
+would be nice to change the internal libraries to EM based ones.
+
+
 To run the server
 
     
