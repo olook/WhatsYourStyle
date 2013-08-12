@@ -13,8 +13,6 @@ module WhatsYourStyle
     RANDOMIZE = Application.app_config['randomize']
 
     version 'v1', :using => :path
-    format :json
-    content_type :json, "application/json; charset=utf-8"
 
     helpers do
 
