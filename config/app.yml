@@ -1,5 +1,5 @@
 # CDN url for image location
-images_path: "https://s3-sa-east-1.amazonaws.com/cdn.quiz.olook.com.br/v2"
+images_path: "https://s3-sa-east-1.amazonaws.com/cdn.quiz.olook.com.br/assets"
 # Randomize questions?
 randomize: true
 # Number of dummy questions that should be added to the quiz. They have 
